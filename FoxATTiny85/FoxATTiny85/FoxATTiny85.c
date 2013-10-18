@@ -13,7 +13,7 @@
 #define DOT_COUNT 150
 #define DASH_COUNT 450
 #define WAVE_DELAY_US 500
-#define SYMB_DELAY_MS 150
+#define SYMB_DELAY_MS 200
 #define CHAR_DELAY_MS (300 - SYMB_DELAY_MS)
 #define KEY_UP_DELAY_MS 200
 #define TX_HOLD_MS 0
@@ -52,48 +52,115 @@ void txoff(){
 void sendChar(char symbol){
 	switch(symbol){
 		case '1':
-			dot(); dash();	dash();	dash();	dash();
-			break;
+		dot(); dash();	dash();	dash();	dash();
+		break;
 		case '2':
-			dot();	dot();	dash();	dash();	dash();
-			break;
+		dot();	dot();	dash();	dash();	dash();
+		break;
 		case '3':
-			dot();	dot();	dot();	dash();	dash();
-			break;
+		dot();	dot();	dot();	dash();	dash();
+		break;
 		case '4':
-			dot(); dot(); dot(); dot(); dash(); dash();
-			break;
+		dot(); dot(); dot(); dot(); dash(); dash();
+		break;
 		case '5':
-			dot(); dot(); dot(); dot(); dot();
-			break;
+		dot(); dot(); dot(); dot(); dot();
+		break;
 		case '6':
-			dash(); dot(); dot(); dot(); dot();
-			break;
+		dash(); dot(); dot(); dot(); dot();
+		break;
 		case '7':
-			dash(); dash(); dot(); dot(); dot();
-			break;
+		dash(); dash(); dot(); dot(); dot();
+		break;
 		case '8':
-			dash(); dash(); dash(); dot(); dot();
-			break;
+		dash(); dash(); dash(); dot(); dot();
+		break;
 		case '9':
-			dash(); dash(); dash(); dash(); dot();
-			break;
+		dash(); dash(); dash(); dash(); dot();
+		break;
 		case '0':
-			dash(); dash(); dash(); dash();	dash();
-			break;
+		dash(); dash(); dash(); dash();	dash();
+		break;
 		case 'a':
-			dot(); dash();
+		dot(); dash();
+		break;
+		case 'b':
+		dash();	dot();	dot();	dot();
+		break;
 		case 'c':
-			dash();	dot();	dash();	dot();
-			break;
+		dash();	dot();	dash();	dot();
+		break;
+		case 'd':
+		dash();	dot();	dot();
+		break;
+		case 'e':
+		dot();
+		break;
+		case 'f':
+		dot();	dot();	dash();	dot();
+		break;
+		case 'g':
+		dash();	dash();	dot();
+		break;
+		case 'h':
+		dot();	dot();	dot();	dot();
+		break;
+		case 'i':
+		dot();	dot();
+		break;
+		case 'j':
+		dot();	dash();	dash();	dash();
+		break;
+		case 'k':
+		dash();	dot();	dash();
+		break;
+		case 'l':
+		dot();	dash();	dot();	dot();
+		break;
+		case 'm':
+		dash();	dash();
+		break;
+		case 'n':
+		dash();	dot();
+		break;
+		case 'o':
+		dash();	dash();	dash();
+		break;
+		case 'p':
+		dot();	dash();	dash();	dot();
+		break;
+		case 'q':
+		dash();	dash();	dot();	dash();
+		break;
+		case 'r':
+		dot();	dash();	dot();
+		break;
+		case 's':
+		dot();	dot();	dot();
+		break;
+		case 't':
+		dash();
+		break;
+		case 'u':
+		dot();	dot();	dash();
+		break;
 		case 'v':
-			dot();	dot();	dot();	dash();
-			break;
+		dot();	dot();	dot();	dash();
+		break;
 		case 'w':
-			dot();	dash();	dash();
-			break;
+		dot();	dash();	dash();
+		break;
+		case 'x':
+		dash();	dot();	dot();	dash();
+		break;
+		case 'y':
+		dash();	dot();	dash();	dash();
+		break;
+		case 'z':
+		dash();	dash();	dot();	dot();
+		break;
 		default:
-			break;
+		break;
 	}
 	_delay_ms(CHAR_DELAY_MS);
 }
@@ -107,7 +174,7 @@ int main(void)
 	PORTB &= ~(1<<DATA_PIN);
 	
 	// Create message
-	char *message = "w3vc";
+	char *message = "kk6bbm";
 	int message_len = 4;
 	int index = 0;
 		
