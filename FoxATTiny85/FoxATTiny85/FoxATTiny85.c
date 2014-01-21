@@ -174,7 +174,7 @@ int main(void)
 	PORTB &= ~(1<<DATA_PIN);
 	
 	// Create message
-	char *message = "kk6bbm";
+	char *message = "w3vc";
 	int message_len = 4;
 	int index = 0;
 		
